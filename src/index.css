@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Dancing+Script:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", serif;
+  --font-script: "Dancing Script", cursive;
+  
+  --color-soft-pink: #FCE7F3; /* Pink 100 */
+  --color-gold: #A67C52; /* Logo text color */
+  --color-gold-light: #D4AF37;
+  --color-heart-pink: #F472B6; /* Logo heart color */
+  --color-deep-pink: #DB2777; /* Pink 600 */
+}
+
+@layer base {
+  body {
+    @apply font-sans text-[#111111] bg-[#FFF5F9] antialiased;
+  }
+}
+
+.text-gold {
+  color: var(--color-gold);
+}
+
+.bg-gold {
+  background-color: var(--color-gold);
+}
+
+.border-gold {
+  border-color: var(--color-gold);
+}
+
+.script-font {
+  font-family: var(--font-script);
+}
+
+.display-font {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar for better aesthetic */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-soft-pink);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F9A8D4;
+}
